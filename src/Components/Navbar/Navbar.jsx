@@ -15,7 +15,7 @@ const Navbar = () => {
         { id: '5', path: '*', name:'not found'},
       ];
     return (
-        <nav>
+        <nav className="text-black p-7 bg-yellow-100 ">
             <div className="md:hidden" onClick={() =>setOpen(!open )}> 
             {
                 open === true ? 
@@ -25,7 +25,9 @@ const Navbar = () => {
          
             </div>
 
-        <ul className='md:flex gap-12'>
+        <ul className={`md:flex gap-12 px-6 bg-yellow-200 duration-1000 md:static
+                          ${open ? 'top-14' : '-top-60 '}
+                          absolute `}>
         {
                 routes.map(route =><Link key={route.id} route={route}></Link> )
             }
