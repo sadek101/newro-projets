@@ -1,3 +1,4 @@
+import PriceOption from "../PriceOption/PriceOption";
 
 
 const Price = () => {
@@ -47,7 +48,10 @@ const Price = () => {
       
     return (
         <div>
-            
+            <h2 className="text-5xl">best price in the town </h2>
+            {
+                priceOption.map(option => <PriceOption key={option.id} option={option}></PriceOption>)
+            }
         </div>
     );
 };
